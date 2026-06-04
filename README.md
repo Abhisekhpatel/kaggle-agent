@@ -1,30 +1,28 @@
 @"
 # Autonomous Kaggle Agent
 
-An AI-powered multi-agent system that autonomously competes in Kaggle competitions.
-Built with Claude Opus 4.8 + dynamic workflows.
+A fully autonomous AI agent that competes in Kaggle competitions using Claude Opus 4.8.
 
-## What it does
-- Orchestrator agent picks and downloads competitions (Phase 1)
-- EDA agent profiles data and generates full ML strategy (Phase 2)
-- Model builder + Optuna tuning (Phase 3 — coming soon)
-- Auto-submission with LB feedback loop (Phase 4 — coming soon)
+## Architecture (7 Phases)
+- L1: Orchestrator - Claude Opus 4.8 plans and coordinates
+- L2: Specialist agents - EDA, feature engineering, model builder, Optuna tuning
+- L3: Shared tools - Kaggle API, ChromaDB memory, MLflow, Notebook RAG
+- L4: Iterative refinement loop - train, reflect, improve, retrain
+- L5: Ensemble + stacking - OOF predictions, meta-learner
+- L6: Validation gate - leak check, schema check, score threshold
+- L7: Auto-submission - kaggle CLI + LB score logging
+- L8: LB feedback loop - orchestrator reflects and respawns agents
 
-## Setup
-\`\`\`bash
-pip install kaggle anthropic pandas scikit-learn lightgbm xgboost optuna mlflow
-export ANTHROPIC_API_KEY=your_key
-\`\`\`
+## Results
+- Titanic: LB 0.77990
+- Stellar Classification (PS S6E6): LB 0.95655, Rank 409/531
 
-## Run
-\`\`\`bash
-python orchestrator.py   # Phase 1
-python eda_agent.py      # Phase 2
-\`\`\`
+## Run (single command)
+python agent.py --competition playground-series-s6e6 --loops 3
 
 ## Stack
-Claude Opus 4.8 · Kaggle API · Optuna · LightGBM · XGBoost · MLflow · ChromaDB
+Claude Opus 4.8, Kaggle API, LightGBM, XGBoost, Optuna, ChromaDB, MLflow, ChromaDB RAG
 "@ | Set-Content "C:\Users\abhishek\README.md"
-git add README.md
-git commit -m "Add README"
+git add notebook_rag.py agent.py stellar_agent.py stellar_v2.py stellar_overnight.py orchestrator_v2.py pipeline.py memory_tracker.py README.md
+git commit -m "All phases complete - RAG + autonomous agent + README"
 git push
