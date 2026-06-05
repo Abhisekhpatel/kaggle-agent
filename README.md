@@ -1,5 +1,5 @@
 @"
-# Autonomous Kaggle Agent
+# Autonomous Kaggle Agent.
 
 A fully autonomous AI agent that competes in Kaggle competitions using Claude Opus 4.8.
 
