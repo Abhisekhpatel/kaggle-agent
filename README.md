@@ -13,7 +13,7 @@ A fully autonomous AI agent that competes in Kaggle competitions using Claude Op
 - L7: Auto-submission - kaggle CLI + LB score logging
 - L8: LB feedback loop - orchestrator reflects and respawns agents
 
-## Results
+## Result
 - Titanic: LB 0.77990
 - Stellar Classification (PS S6E6): LB 0.95655, Rank 409/531
 
