@@ -4,7 +4,7 @@
 A fully autonomous AI agent that competes in Kaggle competitions using Claude Opus 4.8.
 
 ## Architecture (7 Phases)
-- L1: Orchestrator - Claude Opus 4.8 plans and coordinate
+- L1: Orchestrator - Claude Opus 4.8 plans and coordinates
 - L2: Specialist agents - EDA, feature engineering, model builder, Optuna tuning
 - L3: Shared tools - Kaggle API, ChromaDB memory, MLflow, Notebook RAG
 - L4: Iterative refinement loop - train, reflect, improve, retrain
